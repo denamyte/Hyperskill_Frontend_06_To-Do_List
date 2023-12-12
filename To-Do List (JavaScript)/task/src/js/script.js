@@ -1,8 +1,6 @@
-function addStaticTasks() {
+function init() {
     ['Task 1', 'Task 2', 'Task 3'].forEach(addTask)
-}
 
-function addListeners() {
     document.getElementById("add-task-button")
         .addEventListener("click", addButtonClick);
 }
@@ -25,6 +23,8 @@ function addTask(text) {
     span.className = 'task';
     span.innerText = text;
 
+    assignMarkDoneEvent(chb, span);
+
     const btn = document.createElement('button');
     btn.className = 'delete-btn';
     btn.innerText = 'x';
@@ -36,5 +36,16 @@ function addTask(text) {
     document.getElementById('task-list').append(li);
 }
 
-addStaticTasks();
-addListeners();
+/**
+ * Assign the change event listener to the checkbox to mark the task as done/undone.
+ * @param {HTMLInputElement} chb
+ * @param {HTMLSpanElement} sp
+ */
+function assignMarkDoneEvent(chb, sp) {
+    chb.addEventListener('change', ev => {
+        if (chb.checked) sp.classList.add('done');
+        else sp.classList.remove('done');
+    });
+}
+
+init();
