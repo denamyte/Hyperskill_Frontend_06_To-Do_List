@@ -144,6 +144,82 @@ files:
           await new TodoTest().runTests()
       }, 30000)
     learner_created: false
+  - name: src/css/style.css
+    visible: true
+    text: |
+      body {
+          font-family: sans-serif;
+      }
+      
+      h1 {
+          text-align: center;
+          font-weight: normal;
+          font-size: 3em;
+      }
+      
+      main {
+          width: 70%;
+          margin: 0 auto;
+      }
+      
+      #add-area {
+          display: flex;
+          justify-content: space-between;
+      }
+      
+      #input-task {
+          display: inline-block;
+          width: 75%;
+          font-size: 1em;
+          padding: 0 10px;
+          border: none;
+          border-bottom: 2px solid #664d73;
+      }
+      
+      #add-task-button {
+          width: 20%;
+          font-weight: bold;
+          border: none;
+          font-size: 1.2em;
+          padding: 15px 0;
+          background-color: #c8b8db;
+          color: white;
+      }
+      
+      #task-list {
+          padding: 0;
+          list-style: none;
+      }
+      
+      .check {
+          display: inline-block;
+          width: 1.5em;
+          height: 1.5em;
+          margin: 2px 20px 3px 5px;
+      }
+      
+      #task-list li {
+          padding: 5px;
+          margin: 10px;
+      }
+      
+      .delete-btn {
+          font-size: 1.2em;
+          padding: 0 8px 3px;
+          margin: 0 10px;
+          border-radius: 50%;
+          border: 0;
+          background-color: #f44336;
+          color: white;
+          float: right;
+      }
+    learner_created: true
+  - name: src/js/script.js
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/learn/step/13195#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 12 Dec 2023 15:16:15 UTC"
+record: 2
